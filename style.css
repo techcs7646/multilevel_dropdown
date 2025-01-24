@@ -58,3 +58,36 @@ body {
   content: " ▶";
   float: right;
 }
+
+/* Add responsive styles */
+@media screen and (max-width: 768px) {
+  .nav-menu li {
+    display: block;
+    width: 100%;
+  }
+
+  .dropdown {
+    position: static;
+    width: 100%;
+    box-shadow: none;
+    background-color: #555;
+  }
+
+  .dropdown .dropdown {
+    position: static;
+    left: 0;
+    padding-left: 20px;
+  }
+
+  .nav-menu a {
+    padding: 15px;
+  }
+
+  .has-dropdown > a:after {
+    float: right;
+  }
+
+  .dropdown .has-dropdown > a:after {
+    content: " ▼";
+  }
+}
